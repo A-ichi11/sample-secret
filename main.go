@@ -27,7 +27,7 @@ func main() {
 
 	secretsManager := &secretsManager{awsSecretsManager.New(sess)}
 	input := &awsSecretsManager.GetSecretValueInput{
-		SecretId: aws.String("gc-sun/dev/audit-resources/private-key"),
+		SecretId: aws.String("secrets managerのシークレットの名前"),
 	}
 	value, err := secretsManager.SecretsManager.GetSecretValue(input)
 	if err != nil {
